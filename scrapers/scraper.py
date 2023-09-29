@@ -19,6 +19,6 @@ class Scraper(ABC):
     def scrape(self):
         raise NotImplementedError
 
-    def save_data(self, products_list: list):
+    def save_data(self, product_list: list):
         with open(f"data/{self.source_name}_{self.execution_date}.json", "w") as file:
-            json.dump(products_list, file, indent=4, ensure_ascii=False)
+            json.dump(product_list, file, indent=4, ensure_ascii=False)
